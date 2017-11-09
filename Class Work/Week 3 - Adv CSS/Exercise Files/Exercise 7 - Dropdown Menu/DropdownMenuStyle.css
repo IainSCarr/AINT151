@@ -38,8 +38,9 @@
 
 #menu>li>ul>li>a{
   display: block;
-    padding: 8px;
+  padding: 8px;
   text-decoration: none;
+  color: black;
 }
 
 #menu>li>ul>li>a:hover{
