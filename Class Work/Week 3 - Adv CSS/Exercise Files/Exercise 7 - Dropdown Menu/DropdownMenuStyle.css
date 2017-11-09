@@ -1,0 +1,49 @@
+#menu>li{
+  list-style-type: none;
+  float: left;
+  position: relative;
+}
+
+#menu>li>a{
+  display: block;
+  padding: 8px;
+  background-color: grey;
+  color: black;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  text-decoration: none;
+  width: 100px
+}
+
+#menu>li>a:hover{
+  background-color: black;
+  color: white;
+}
+
+#menu>li>ul{
+  display: none;
+  position: absolute;
+}
+
+#menu>li:hover ul{
+  display: block;
+  list-style-type: none;
+  padding-left: 0;
+  background-color: grey;
+  color: black;
+  width: 150px;
+
+}
+
+#menu>li>ul>li>a{
+  display: block;
+    padding: 8px;
+  text-decoration: none;
+}
+
+#menu>li>ul>li>a:hover{
+  display: block;
+  background-color: black;
+  color: white;
+}

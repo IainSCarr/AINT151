@@ -1,0 +1,19 @@
+ul{
+  width: 300px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  background-color: grey;
+  color: black;
+  display: block;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
