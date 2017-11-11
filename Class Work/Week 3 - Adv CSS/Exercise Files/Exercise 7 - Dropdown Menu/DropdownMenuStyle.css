@@ -7,7 +7,7 @@
 #menu>li>a{
   display: block;
   padding: 8px;
-  background-color: grey;
+  background-color: #999999;
   color: black;
   border-style: solid;
   border-color: white;
@@ -17,8 +17,7 @@
 }
 
 #menu>li>a:hover{
-  background-color: black;
-  color: white;
+  background-color: #bcbcbc;
 }
 
 #menu>li>ul{
@@ -30,8 +29,8 @@
   display: block;
   list-style-type: none;
   padding-left: 0;
-  background-color: grey;
-  color: black;
+  background-color: #636363;
+  color: white;
   width: 150px;
 
 }
@@ -40,11 +39,11 @@
   display: block;
   padding: 8px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 #menu>li>ul>li>a:hover{
   display: block;
-  background-color: black;
-  color: white;
+  background-color: #bcbcbc;
+  color: black;
 }
