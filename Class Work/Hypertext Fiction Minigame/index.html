@@ -3,32 +3,33 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="master.css">
+    <script src="data.js"></script>
+    <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
     <title>Game Title</title>
   </head>
-  <body>
+  <body onLoad="OnLoad()">
 
     <div class="rightcol">
-      <img src="assets/half_heart.png" id="heart" alt="">
+      <img src="assets/full_heart.png" id="heart" alt="">
+      <img src="assets/full_heart.png" id="heart" alt="">
+      <img src="assets/full_heart.png" id="heart" alt="">
       <img src="assets/full_heart.png" id="heart" alt="">
       <img src="assets/full_heart.png" id="heart" alt="">
     </div>
 
-    <div class="leftcol">
-    </div>
+    <div class="leftcol"></div>
 
-    <h1>HEADER</h1>
 
-    <h3>INSERT AN INTRODUCTION ABOUT THE GAME HERE.</h3>
 
-    <h6>OPTION 1</h6>
 
-    <h6>OPTION 2</h6>
+    <h1 id="roomTitle">Room title</h1>
 
-    <h6>OPTION 3</h6>
+    <p id="roomText">Room text</p>
 
-    <p>This is a test of the font.</p>
+    <div id="roomChoices">Room choice buttons</div>
+
 
   </body>
 </html>
