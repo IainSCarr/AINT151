@@ -4,8 +4,6 @@ body {
   background-color: black;
   color: white;
   text-align: center;
-  border: 20px solid blue;
-  border-top: 0;
   padding-bottom: 70px;
 }
 
@@ -18,14 +16,23 @@ body {
 .rightcol {
   float: right;
   width: 300px;
+<<<<<<< HEAD
   height: 60px;
   background-color: white;
+=======
+  height: 300px;
+  background-color: black;
+>>>>>>> c88bd39eaba10decca0ca04acb224936bd8f3496
 }
 
 .leftcol {
   float: left;
   width: 300px;
+<<<<<<< HEAD
   height: 60px;
+=======
+  height: 300px;
+>>>>>>> c88bd39eaba10decca0ca04acb224936bd8f3496
   background-color: black;
 }
 
@@ -35,4 +42,15 @@ h1 {
 
 p {
   font-family: 'Spectral SC', serif;
+}
+
+button {
+  margin-bottom: 5px;
+  background-color: #606060;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #9b9b9b;
 }
