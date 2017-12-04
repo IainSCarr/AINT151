@@ -15,29 +15,21 @@ body {
 
 .rightcol {
   float: right;
-  width: 300px;
-<<<<<<< HEAD
-  height: 60px;
-  background-color: white;
-=======
-  height: 300px;
+  width: 25%;
+  height: 2000px;
   background-color: black;
->>>>>>> c88bd39eaba10decca0ca04acb224936bd8f3496
 }
 
 .leftcol {
   float: left;
-  width: 300px;
-<<<<<<< HEAD
-  height: 60px;
-=======
-  height: 300px;
->>>>>>> c88bd39eaba10decca0ca04acb224936bd8f3496
+  width: 25%;
+  height: 2000px;
   background-color: black;
 }
 
 h1 {
-  font-family: 'Chelsea Market', cursive;
+  font-family: 'Spectral SC', serif;
+  text-decoration: underline;
 }
 
 p {
