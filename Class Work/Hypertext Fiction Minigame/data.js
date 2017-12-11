@@ -365,8 +365,8 @@ var roomArray = [
 	},
 	{
 		title:'The Lair of Grodush the Indomitable',
-		text:'Mustering all the courage you have, you charge at Grodush and slice its leg open. The beast lets out a harrowing roar that reverberates through your body and, in a rage, smacks you across the room.',
-		picture:'assets/images/monster.png',
+		text:'Mustering all the courage you have, you charge at Grodush and stab out its eye. The beast lets out a harrowing roar that reverberates through your body and, in a rage, smacks you across the room.',
+		picture:'assets/images/eye.png',
 		audio:'assets/audio/creature growl 07.mp3',
 		choices:[
 			{
