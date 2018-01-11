@@ -47,7 +47,7 @@ var roomArray = [
 		title:'Training Room',
 		text:'Creeping forwards down the passageway you approach what looks like a training room scattered with broken sticks and shards of metal. The room has archery targets and mannequins made of straw while the ground is stained red in places. To the east you catch a glint of metal through reinforced doors. South is an archway that leads a large courtyard.',
 		picture:'assets/images/target.png',
-		audio:'assets/audio/civwin.wav',
+		audio:'',
 		choices:[
 			{
 				text:'Go back to where you fell.',
@@ -160,10 +160,10 @@ var roomArray = [
 		]
 	},
 	{
-		title:'Barracks',
+		title:'Armory',
 		text:'You slide your hand along the harsh metal before selecting a sword. A skull has been carved into the pommel while gems line the guard; this is no ordinary sword. As you raise it up you feel power course through your veins. To the south you hear some faint screams while east leads to the training room.',
 		picture:'assets/images/sword.png',
-		audio:'assets/audio/swordhit.mp3',
+		audio:'assets/audio/sword hit 05.mp3',
 		choices:[
 			{
 				text:'Go towards the screams.',
@@ -227,7 +227,7 @@ var roomArray = [
 		title:'Barracks',
 		text:'You enter the room and your heart almost stops. Hundreds of sleeping orcs! Trying to stay as silent as possible there is a disgusting smell radiating from a room to the south however as you move further into the room you catch a whiff of something delicious coming from a room to the east. To the north lies a dark ominous room while a low chanting can be heard from the west.',
 		picture:'assets/images/bed.png',
-		audio:'assets/images/snoring.mp3',
+		audio:'assets/audio/snoring.mp3',
 		choices:[
 			{
 				text:'Investigate the disgusting smell.',
@@ -251,7 +251,7 @@ var roomArray = [
 		title:'Latrines',
 		text:'The smell grows stronger and stronger and eventually overwhelms you. You vomit everywhere and through a tear you make out some overflowing toilets. An orc has fallen asleep on one of them however you don’t stay to inspect as the stench forces you to exit. You catch a whiff of something delicious coming from a room to the east. To the north lies a dark ominous room while a low chanting can be heard from the west.',
 		picture:'assets/images/poop.png',
-		audio:'assets/images/vomit.wav',
+		audio:'assets/audio/vomit.wav',
 		choices:[
 			{
 				text:'Investigate the delicious smell.',
