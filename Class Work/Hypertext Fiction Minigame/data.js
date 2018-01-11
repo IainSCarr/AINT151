@@ -238,7 +238,7 @@ var roomArray = [
 				index:14
 			},
 			{
-				text:'Go into the dark room.',
+				text:'Go into the smoky room.',
 				index:3
 			},
 			{

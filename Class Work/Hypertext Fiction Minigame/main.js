@@ -1,4 +1,5 @@
 var health = 10;
+var isDead = false;
 
 var hasSword = false;
 var hasMagic = false;
@@ -20,13 +21,51 @@ function SelectRoom(roomIndex)
 		document.getElementById('roomChoices').innerHTML = "";
 		document.getElementById('image').innerHTML = "";
 
-		RoomCheck(roomIndex);
+		document.getElementById('health').innerHTML = "";
 
-		AddPicture(roomIndex);
+		if (health < 1) {
+			if (!isDead) {
+				isDead = true;
+				SelectRoom(23);
+			}
+			else {
+				RoomCheck(roomIndex);
 
-		AddButtons(roomIndex);
+				DisplayHealth();
 
-		AddAudio(roomIndex);
+				AddPicture(roomIndex);
+
+				AddButtons(roomIndex);
+
+				AddAudio(roomIndex);
+			}
+		}
+		else {
+			RoomCheck(roomIndex);
+
+			DisplayHealth();
+
+			AddPicture(roomIndex);
+
+			AddButtons(roomIndex);
+
+			AddAudio(roomIndex);
+		}
+}
+
+function DisplayHealth()
+{
+	var halfHeart = "<img src='assets/images/half_heart.png' id='heart' alt='Full Heart'>";
+	var fullHeart = "<img src='assets/images/full_heart.png' id='heart' alt='Half Heart'>";
+
+	if ((health % 2) != 0) {
+		document.getElementById('health').innerHTML += halfHeart;
+	}
+
+	for (var i = 0; i < ((health-1)/2); i++) {
+		document.getElementById('health').innerHTML += fullHeart;
+	}
+
 }
 
 function RoomCheck(roomIndex)
@@ -52,6 +91,20 @@ function RoomCheck(roomIndex)
 	else if (roomIndex == 16) {
 		hasMagic = true;
 	}
+	else if (roomIndex == 0) {
+		Reset();
+	}
+}
+
+function Reset() {
+	health = 10;
+	hasMagic = false;
+	hasSword = false;
+	hasSwordOption = true;
+	hasMeatOption = true;
+	hasLatrineOption = true;
+	hasMausoleumOption = true;
+	isDead = false;
 }
 
 function AddButtons(roomIndex)
@@ -118,8 +171,6 @@ function AddButtons(roomIndex)
 		}
 	}
 }
-
-
 
 function AddPicture(roomIndex)
 {
