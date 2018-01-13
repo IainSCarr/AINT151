@@ -5,6 +5,13 @@ body {
   color: white;
   text-align: center;
   padding-bottom: 70px;
+  background-image: url(assets/web/background.png);
+}
+
+#items {
+  width: 60px;
+  height: 60px;
+  float: left;
 }
 
 #heart {
@@ -15,16 +22,14 @@ body {
 
 .rightcol {
   float: right;
-  width: 25%;
+  width: 20%;
   height: 2000px;
-  background-color: black;
 }
 
 .leftcol {
   float: left;
-  width: 25%;
+  width: 20%;
   height: 2000px;
-  background-color: black;
 }
 
 .title {
@@ -42,7 +47,7 @@ p {
 }
 
 button {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   background-color: #606060;
   padding: 10px;
   border-radius: 10px;
@@ -52,4 +57,5 @@ button {
 
 button:hover {
   background-color: #9b9b9b;
+
 }

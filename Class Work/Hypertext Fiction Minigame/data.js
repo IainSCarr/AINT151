@@ -197,7 +197,7 @@ var roomArray = [
 	},
 	{
 		title:'You Died!',
-		text:'Thinking escape is near, you accidentally trip a wire and a blade slices you in half. As you bleed to death you are filled with regret for not heeding the warning. Your remains are fed to a terrible beast.',
+		text:'Thinking escape is near, you accidentally trip a wire and a blade slices you in half. As you bleed to death you are filled with regret for not heeding the warning. Your remains are fed to a terrible beast. </br><p>Learn from your previous mistakes or forever be doomed to fail</p>',
 		picture:'assets/images/skull.png',
 		audio:'assets/audio/manscream.wav',
 		choices:[
@@ -238,7 +238,7 @@ var roomArray = [
 				index:14
 			},
 			{
-				text:'Go into the smoky room.',
+				text:'Go into the dark room.',
 				index:3
 			},
 			{
@@ -405,7 +405,7 @@ var roomArray = [
 	},
 	{
 		title:'You Died!',
-		text:'Your health has dropped to zero. You have died.',
+		text:'Your health has dropped to zero. You have died. </br><p>Learn from your previous mistakes or forever be doomed to fail</p>',
 		picture:'assets/images/skull.png',
 		audio:'assets/audio/manscream.wav',
 		choices:[

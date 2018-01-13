@@ -1,5 +1,4 @@
 var health = 10;
-var isDead = false;
 
 var hasSword = false;
 var hasMagic = false;
@@ -20,50 +19,53 @@ function SelectRoom(roomIndex)
 
 		document.getElementById('roomChoices').innerHTML = "";
 		document.getElementById('image').innerHTML = "";
-
 		document.getElementById('health').innerHTML = "";
+		document.getElementById('inventory').innerHTML = "";
 
-		if (health < 1) {
-			if (!isDead) {
-				isDead = true;
-				SelectRoom(23);
-			}
-			else {
-				RoomCheck(roomIndex);
+		RoomCheck(roomIndex);
 
-				DisplayHealth();
-
-				AddPicture(roomIndex);
-
-				AddButtons(roomIndex);
-
-				AddAudio(roomIndex);
-			}
-		}
-		else {
-			RoomCheck(roomIndex);
-
-			DisplayHealth();
-
+		if (health > 0) {
 			AddPicture(roomIndex);
 
 			AddButtons(roomIndex);
 
 			AddAudio(roomIndex);
+
+			DisplayHealth(roomIndex);
+
+			DisplayInventory();
 		}
+		else {
+			Reset();
+			SelectRoom(23);
+		}
+
 }
 
-function DisplayHealth()
-{
-	var halfHeart = "<img src='assets/images/half_heart.png' id='heart' alt='Full Heart'>";
-	var fullHeart = "<img src='assets/images/full_heart.png' id='heart' alt='Half Heart'>";
-
-	if ((health % 2) != 0) {
-		document.getElementById('health').innerHTML += halfHeart;
+function DisplayInventory() {
+	if (hasSword) {
+		document.getElementById('inventory').innerHTML += "<img src='assets/images/sword.png' id='items' alt='sword'>";
 	}
 
-	for (var i = 0; i < ((health-1)/2); i++) {
-		document.getElementById('health').innerHTML += fullHeart;
+	if (hasMagic) {
+		document.getElementById('inventory').innerHTML += "<img src='assets/images/book.png' id='items' alt='magic'>";
+	}
+}
+
+function DisplayHealth(roomIndex)
+{
+	if (roomIndex != 10 && roomIndex != 23)
+	{
+		var halfHeart = "<img src='assets/images/half_heart.png' id='heart' alt='Full Heart'>";
+		var fullHeart = "<img src='assets/images/full_heart.png' id='heart' alt='Half Heart'>";
+
+		if ((health % 2) != 0) {
+			document.getElementById('health').innerHTML += halfHeart;
+		}
+
+		for (var i = 0; i < ((health-1)/2); i++) {
+			document.getElementById('health').innerHTML += fullHeart;
+		}
 	}
 
 }
@@ -80,6 +82,9 @@ function RoomCheck(roomIndex)
 		health = 10;
 		hasMeatOption = false;
 	}
+	else if (roomIndex == 0) {
+		Reset();
+	}
 	else if (roomIndex == 17) {
 		health -= 6;
 		hasMausoleumOption = false;
@@ -91,20 +96,18 @@ function RoomCheck(roomIndex)
 	else if (roomIndex == 16) {
 		hasMagic = true;
 	}
-	else if (roomIndex == 0) {
-		Reset();
-	}
 }
 
-function Reset() {
+function Reset()
+{
 	health = 10;
-	hasMagic = false;
+
 	hasSword = false;
-	hasSwordOption = true;
-	hasMeatOption = true;
-	hasLatrineOption = true;
+	hasMagic = false;
 	hasMausoleumOption = true;
-	isDead = false;
+	hasSwordOption = true;
+	hasLatrineOption = true;
+	hasMeatOption = true;
 }
 
 function AddButtons(roomIndex)
@@ -163,6 +166,26 @@ function AddButtons(roomIndex)
 			}
 		}
 	}
+	else if ((roomIndex == 19) && (hasSword == false)) {
+		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
+			if (i != 0) {
+				var index = roomArray[roomIndex].choices[i].index;
+				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
+				document.getElementById('roomChoices').innerHTML += button;
+				document.getElementById('roomText').innerHTML += "</br><p>You do not have a sword!</p>"
+			}
+		}
+	}
+	else if ((roomIndex == 20) && (hasMagic == false)) {
+		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
+			if (i != 0) {
+				var index = roomArray[roomIndex].choices[i].index;
+				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
+				document.getElementById('roomChoices').innerHTML += button;
+				document.getElementById('roomText').innerHTML += "</br><p>You do not have magic!</p>"
+			}
+		}
+	}
 	else {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			var index = roomArray[roomIndex].choices[i].index;
@@ -171,6 +194,8 @@ function AddButtons(roomIndex)
 		}
 	}
 }
+
+
 
 function AddPicture(roomIndex)
 {
