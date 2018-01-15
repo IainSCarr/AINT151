@@ -10,6 +10,7 @@ var hasMeatOption = true;
 function OnLoad()
 {
 	SelectRoom(0);
+	document.getElementById("audio").volume = 0.4;
 }
 
 function SelectRoom(roomIndex)
@@ -73,7 +74,7 @@ function DisplayHealth(roomIndex)
 function RoomCheck(roomIndex)
 {
 	if (roomIndex == 3 || roomIndex == 13 || roomIndex == 20) {
-		health -= 3;
+		health -= 2;
 		if (roomIndex == 13) {
 			hasLatrineOption = false;
 		}
@@ -189,7 +190,7 @@ function AddButtons(roomIndex)
 function AddPicture(roomIndex)
 {
 	var img = roomArray[roomIndex].picture;
-	var picture = "<img src='" + img + "'>" ;
+	var picture = "<img " + img + ">";
 	document.getElementById('image').innerHTML += picture;
 }
 

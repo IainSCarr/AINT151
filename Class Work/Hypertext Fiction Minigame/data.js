@@ -2,7 +2,7 @@ var roomArray = [
 	{
 		title:'The Pit',
 		text:'Hiking through the mountains the ground gives way and you fall into a deep chasm. You awake, bruised and bloody, on a cold slab in a dank, cavernous room. Above you a glimmer of light shines down from where you fell, to your east is what looks like a training room while west smoke bellows from a hot room. As further investigate you notice a small crevice from which red light emanates.',
-		picture:'assets/images/blood.png',
+		picture:'src="assets/images/blood.png" alt="cracked slab with blood"',
 		audio:'',
 		choices:[
 			{
