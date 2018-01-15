@@ -110,68 +110,61 @@ function Reset()
 	hasMeatOption = true;
 }
 
+function DisplayButton(i, roomIndex)
+{
+	var index = roomArray[roomIndex].choices[i].index;
+	var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
+	document.getElementById('roomChoices').innerHTML += button;
+}
+
 function AddButtons(roomIndex)
 {
 	if ((roomIndex == 5) && (hasMausoleumOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 2) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 6) && (hasSwordOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 0) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 12) && (hasLatrineOption == false) && (hasMeatOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i > 1) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 12 || roomIndex == 15) && (hasLatrineOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 0) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 12) && (hasMeatOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 1) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 13) && (hasMeatOption == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 0) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 			}
 		}
 	}
 	else if ((roomIndex == 19) && (hasSword == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 0) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 				document.getElementById('roomText').innerHTML += "</br><p>You do not have a sword!</p>"
 			}
 		}
@@ -179,18 +172,14 @@ function AddButtons(roomIndex)
 	else if ((roomIndex == 20) && (hasMagic == false)) {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
 			if (i != 0) {
-				var index = roomArray[roomIndex].choices[i].index;
-				var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-				document.getElementById('roomChoices').innerHTML += button;
+				DisplayButton(i, roomIndex)
 				document.getElementById('roomText').innerHTML += "</br><p>You do not have magic!</p>"
 			}
 		}
 	}
 	else {
 		for (var i = 0; i < roomArray[roomIndex].choices.length; i++) {
-			var index = roomArray[roomIndex].choices[i].index;
-			var button = "<button onclick='SelectRoom(" + index + ")'>" + roomArray[roomIndex].choices[i].text + "</button></br>"
-			document.getElementById('roomChoices').innerHTML += button;
+			DisplayButton(i, roomIndex)
 		}
 	}
 }

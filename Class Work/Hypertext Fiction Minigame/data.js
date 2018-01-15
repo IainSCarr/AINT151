@@ -67,7 +67,7 @@ var roomArray = [
 		title:'Crematorium',
 		text:'Smoke fills your lungs causing you cough uncontrollably, when you regain your composure and manage to examine the room you vomit everywhere - you’re standing in a crematorium and just inhaled the remains of some creature. Searching further, west you see a tunnel just big enough to crawl into with handprints and the words “Do not enter” scrawled in red by the entrance. To the south is a dimly lit room.',
 		picture:'assets/images/furnace.png',
-		audio:'assets/audio/vomit.wav',
+		audio:'assets/audio/fire.mp3',
 		choices:[
 			{
 				text:'Go back to where you fell',
@@ -163,7 +163,7 @@ var roomArray = [
 		title:'Armory',
 		text:'You slide your hand along the harsh metal before selecting a sword. A skull has been carved into the pommel while gems line the guard; this is no ordinary sword. As you raise it up you feel power course through your veins. To the south you hear some faint screams while east leads to the training room.',
 		picture:'assets/images/sword.png',
-		audio:'assets/audio/sword hit 05.mp3',
+		audio:'assets/audio/getsword.wav',
 		choices:[
 			{
 				text:'Go towards the screams.',
@@ -218,6 +218,10 @@ var roomArray = [
 				index:12
 			},
 			{
+				text:'Approach the courtyard',
+				index:7
+			},
+			{
 				text:'Raise the gate and enter the chamber.',
 				index:19
 			}
@@ -225,7 +229,7 @@ var roomArray = [
 	},
 	{
 		title:'Barracks',
-		text:'You enter the room and your heart almost stops. Hundreds of sleeping orcs! Trying to stay as silent as possible there is a disgusting smell radiating from a room to the south however as you move further into the room you catch a whiff of something delicious coming from a room to the east. To the north lies a dark ominous room while a low chanting can be heard from the west.',
+		text:'You enter the room and your heart almost stops. Hundreds of sleeping orcs! Trying to stay as silent as possible there is a disgusting smell radiating from a room to the south however as you move further into the room you catch a whiff of something delicious coming from a room to the east. To the north smoke bellows from a hot room while a low chanting can be heard from the west.',
 		picture:'assets/images/bed.png',
 		audio:'assets/audio/snoring.mp3',
 		choices:[
@@ -238,7 +242,7 @@ var roomArray = [
 				index:14
 			},
 			{
-				text:'Go into the dark room.',
+				text:'Go into the smoky room.',
 				index:3
 			},
 			{
@@ -322,7 +326,7 @@ var roomArray = [
 	{
 		title:'Mausoleum',
 		text:'Using your new magical abilities, you start blasting the skeletons with fireballs. A couple get too close and manage to injure you before you can blow them to smithereens. Once they are all destroyed you return through the crevice to where you fell and behind you the mausoleum collapses. Above you a glimmer of light shines down from where you fell, to your east is what looks like a training room while west smoke bellows from a hot room.',
-		picture:'assets/images/book.png',
+		picture:'assets/images/fireball.png',
 		audio:'',
 		choices:[
 			{
@@ -337,7 +341,7 @@ var roomArray = [
 	},
 	{
 		title:'You Died!',
-		text:'Your cowardice knows no bounds. As you flee the skeletons capture you before tearing you limb from limb. Those limbs are then fed to a terrible beast.',
+		text:'Your cowardice knows no bounds. As you flee the skeletons capture you before tearing you limb from limb. Those limbs are then fed to a terrible beast. </br><p>Learn from your previous mistakes or forever be doomed to fail</p>',
 		picture:'assets/images/skull.png',
 		audio:'assets/audio/manscream.wav',
 		choices:[
@@ -382,7 +386,7 @@ var roomArray = [
 	{
 		title:'The Lair of Grodush the Indomitable',
 		text:'Using all your strength you launch a powerful magical spell at Grodush however it deflects your attack upwards into the ceiling. A crack begins to form and after a moment the ceiling comes crashing down on top of Grodush crushing it like a bug. The orcs, seeing what you have done, raise the gate and begin to worship you. You become their new chief and lead them above ground to freedom.',
-		picture:'assets/images/monster.png',
+		picture:'assets/images/praisehands.png',
 		audio:'assets/audio/civwin.wav',
 		choices:[
 			{

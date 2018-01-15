@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <meta charset="utf-8">
     <link rel="stylesheet" href="master.css">
     <script src="data.js"></script>
@@ -10,28 +11,50 @@
     <title>The Dread Crypts of Grodush the Indomitable</title>
   </head>
   <body onLoad="OnLoad()">
+    <audio volume="0.1" loop autoplay>
+      <source src="assets/audio/Athmo6.wav" type='audio/wav'>
+      Your browser does not support the audio element.
+    </audio>
 
-    <div class="title">
-      <h1>The Dread Crypts of Grodush the Indomitable</h1>
+    <div class="row">
+    <div class="col-sm-3">
+      <div id="inventory">Inventory</div>
     </div>
+    <div class="col-sm-6">
 
-    <div class="rightcol">
+      <h1 class="title">The Dread Crypts of Grodush the Indomitable</h1>
+
+      <h1 id="roomTitle">Room title</h1>
+
+      <div id="image"></div>
+
+      <p id="roomText">Room text</p>
+
+      <div id="roomChoices"></div>
+
+      <div id="audio"></div>
+
+    </div>
+    <div class="col-sm-3">
       <div id="health">Health</div>
     </div>
 
-    <div class="leftcol">
-      <div id="inventory">Inventory</div>
-    </div>
 
-    <h1 id="roomTitle">Room title</h1>
 
-    <div id="image"></div>
 
-    <p id="roomText">Room text</p>
 
-    <div id="roomChoices"></div>
 
-    <div id="audio"></div>
+
+
+
+
+
+
+
+
+
+
+
 
   </body>
 </html>
