@@ -2,7 +2,6 @@ var health = 10;
 
 var hasSword = false;
 var hasMagic = false;
-var hasGrodush = false;
 var hasMausoleumOption = true;
 var hasSwordOption = true;
 var hasLatrineOption = true;
@@ -11,25 +10,7 @@ var hasMeatOption = true;
 function OnLoad()
 {
 	SelectRoom(0);
-	document.getElementById("audio").volume = 0.5;
-}
-
-function MuteAudio()
-{
-	var aud = document.getElementById('audio')
-	var roomAud = document.getElementById('roomAudio')
-
-	if (aud.muted == true) {
-		aud.muted = false;
-		roomAud.muted = false;
-		document.getElementById('mute').src = 'assets/images/speaker_icon.png'
-	}
-	else {
-		aud.muted = true;
-		roomAud.muted = true;
-		document.getElementById('mute').src = 'assets/images/Mute_icon.png'
-	}
-
+	document.getElementById("audio").volume = 0.4;
 }
 
 function SelectRoom(roomIndex)
@@ -38,7 +19,7 @@ function SelectRoom(roomIndex)
 		document.getElementById('roomText').innerHTML = roomArray[roomIndex].text;
 
 		document.getElementById('roomChoices').innerHTML = "";
-		document.getElementById('imagediv').innerHTML = "";
+		document.getElementById('image').innerHTML = "";
 		document.getElementById('health').innerHTML = "";
 		document.getElementById('inventory').innerHTML = "";
 
@@ -54,27 +35,12 @@ function SelectRoom(roomIndex)
 			DisplayHealth(roomIndex);
 
 			DisplayInventory();
-
 		}
 		else {
 			Reset();
 			SelectRoom(23);
 		}
 
- 		taskUpdate();
-
-}
-
-function taskUpdate() {
-	if (hasSword) {
-		document.getElementById('tableSword').style.textDecoration = "line-through";
-	}
-	if (hasMagic) {
-		document.getElementById('tableMagic').style.textDecoration = "line-through";
-	}
-	if (hasGrodush) {
-		document.getElementById('tableGrodush').style.textDecoration = "line-through";
-	}
 }
 
 function DisplayInventory() {
@@ -83,21 +49,16 @@ function DisplayInventory() {
 	}
 
 	if (hasMagic) {
-		document.getElementById('inventory').innerHTML += "<img src='assets/images/fireball.png' id='items' alt='magic'>";
+		document.getElementById('inventory').innerHTML += "<img src='assets/images/book.png' id='items' alt='magic'>";
 	}
 }
 
 function DisplayHealth(roomIndex)
 {
-	var halfHeart = "<img src='assets/images/half_heart.png' id='heart' alt='Half Heart'>";
-	var fullHeart = "<img src='assets/images/full_heart.png' id='heart' alt='Full Heart'>";
-	var emptyHeart = "<img src='assets/images/empty_heart.png' id='heart' alt='Empty Heart'>";
-
-	if (roomIndex != 10 && roomIndex != 23 && roomIndex != 22)
+	if (roomIndex != 10 && roomIndex != 23)
 	{
-		for (var i = 0; i < ((9-health)/2); i++) {
-			document.getElementById('health').innerHTML += emptyHeart;
-		}
+		var halfHeart = "<img src='assets/images/half_heart.png' id='heart' alt='Full Heart'>";
+		var fullHeart = "<img src='assets/images/full_heart.png' id='heart' alt='Half Heart'>";
 
 		if ((health % 2) != 0) {
 			document.getElementById('health').innerHTML += halfHeart;
@@ -107,18 +68,13 @@ function DisplayHealth(roomIndex)
 			document.getElementById('health').innerHTML += fullHeart;
 		}
 	}
-	else {
-		for (var i = 0; i < 5; i++) {
-			document.getElementById('health').innerHTML += emptyHeart;
-		}
-	}
 
 }
 
 function RoomCheck(roomIndex)
 {
 	if (roomIndex == 3 || roomIndex == 13 || roomIndex == 20) {
-		health -= 3;
+		health -= 2;
 		if (roomIndex == 13) {
 			hasLatrineOption = false;
 		}
@@ -126,9 +82,6 @@ function RoomCheck(roomIndex)
 	else if (roomIndex == 15) {
 		health = 10;
 		hasMeatOption = false;
-	}
-	else if (roomIndex == 21) {
-		hasGrodush = true;
 	}
 	else if (roomIndex == 0) {
 		Reset();
@@ -152,15 +105,10 @@ function Reset()
 
 	hasSword = false;
 	hasMagic = false;
-	hasGrodush = false;
 	hasMausoleumOption = true;
 	hasSwordOption = true;
 	hasLatrineOption = true;
 	hasMeatOption = true;
-
-	document.getElementById('tableGrodush').style.textDecoration = "none";
-	document.getElementById('tableSword').style.textDecoration = "none";
-	document.getElementById('tableMagic').style.textDecoration = "none";
 }
 
 function DisplayButton(i, roomIndex)
@@ -242,14 +190,14 @@ function AddButtons(roomIndex)
 function AddPicture(roomIndex)
 {
 	var img = roomArray[roomIndex].picture;
-	var alt = roomArray[roomIndex].alt;
-	var full = "<img id='image' src='" + img + "' alt='" + alt +"'>";
-	document.getElementById('imagediv').innerHTML += full;
+	var picture = "<img " + img + ">";
+	document.getElementById('image').innerHTML += picture;
 }
 
 
 function AddAudio(roomIndex)
 {
 	var aud = roomArray[roomIndex].audio
-	document.getElementById('roomAudio').src = aud;
+	var audio = "<audio autoplay><source src='" + aud + "' " + "type='audio/wav'>Your browser does not support the audio element.</audio>"
+	document.getElementById('audio').innerHTML = audio;
 }
