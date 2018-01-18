@@ -210,7 +210,7 @@ var roomArray = [
 		text:'Thinking escape is near, you accidentally trip a wire and a blade slices you in half. As you bleed to death you are filled with regret for not heeding the warning. Your remains are fed to a terrible beast. </br></br> Learn from your previous mistakes or forever be doomed to fail.',
 		picture:'assets/images/skull.png',
 		alt:'skull',
-		audio:'assets/audio/manscream.wav',
+		audio:'assets/audio/screams male 04.mp3',
 		choices:[
 			{
 				text:'Try Again.',
@@ -223,7 +223,7 @@ var roomArray = [
 		text:'As you approach the chanting you see orcs dressed in black robes seemingly in a trance. Oblivious to the orcs, you wander into the gothic shrine. An overwhelming sense of dread consumes you as you turn south to face a huge gate and peer through towards a shroud of darkness. To the east lies a long dimly lit room. To the west, an archway leads to a courtyard.',
 		picture:'assets/images/gate.png',
 		alt:'gate',
-		audio:'',
+		audio:'assets/audio/Athmo23Sharpening.wav',
 		choices:[
 			{
 				text:'Head into the dimly lit room',
@@ -362,7 +362,7 @@ var roomArray = [
 		text:'Your cowardice knows no bounds. As you flee the skeletons capture you before tearing you limb from limb. Those limbs are then fed to a terrible beast. </br></br> Learn from your previous mistakes or forever be doomed to fail.',
 		picture:'assets/images/skull.png',
 		alt:'skull',
-		audio:'assets/audio/manscream.wav',
+		audio:'assets/audio/screams male 03.mp3',
 		choices:[
 			{
 				text:'Try Again.',
@@ -422,7 +422,7 @@ var roomArray = [
 		text:'You crumble in the presence of Grodush and it quickly consumes you. </br></br> Learn from your previous mistakes or forever be doomed to fail.',
 		picture:'assets/images/skull.png',
 		alt:'skull',
-		audio:'assets/audio/manscream.wav',
+		audio:'assets/audio/screams male 04.mp3',
 		choices:[
 			{
 				text:'Try Again.',
@@ -435,7 +435,7 @@ var roomArray = [
 		text:'Your health has dropped to zero. You have died. </br></br> Learn from your previous mistakes or forever be doomed to fail.',
 		picture:'assets/images/skull.png',
 		alt:'skull',
-		audio:'assets/audio/manscream.wav',
+		audio:'assets/audio/screams male 04.mp3',
 		choices:[
 			{
 				text:'Try Again.',

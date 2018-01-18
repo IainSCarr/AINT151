@@ -22,12 +22,14 @@ function MuteAudio()
 	if (aud.muted == true) {
 		aud.muted = false;
 		roomAud.muted = false;
-		document.getElementById('mute').src = 'assets/images/speaker_icon.png'
+		document.getElementById('mute').src = 'assets/images/speaker_icon.png';
+		document.getElementById('mute').alt = 'speaker icon';
 	}
 	else {
 		aud.muted = true;
 		roomAud.muted = true;
-		document.getElementById('mute').src = 'assets/images/Mute_icon.png'
+		document.getElementById('mute').src = 'assets/images/Mute_icon.png';
+		document.getElementById('mute').alt = 'mute icon';
 	}
 
 }
